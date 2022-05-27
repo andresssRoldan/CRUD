@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Inicio'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/headerNavbar') %>
+	<!-- /Header -->
+	<main class="input">
+        <form class="form_register" action="/" method="get">
+            <div class="titulosForm">
+                <h4>Registro de usuario</h4>
+            </div>
+            <input class="inp" type="text" name="nombreApellido" placeholder="Ingrese nombre y apellido" required>
+            <input class="inp" type="email" name="user" placeholder="Ingrese su usuarioi@" required>
+            <div class="titulosForm">
+                <h4>Fecha de nacimiento</h4>
+            </div>
+            <input class="inp" type="date" name="fecha" required>
+            <input class="inp" type="text" name="direccion" placeholder="Av 48 # 15 -2 " required>
+            <div class="titulosForm">
+                <h4>Perfil usuario</h4>
+            </div>
+            <div class="rad_check">
+                <div class="radios">
+                    <label for="comprador">
+                        <input type="radio" id="comprador" name="perfilUsuario" value="comprador">
+                        comprador
+                    </label>
+                    <label for="vendedor">
+                        <input type="radio" id="vendedor" name="perfilUsuario" value="vendedor">
+                        vendedor
+                    </label>
+                </div>
+                <div class="checksbox">
+                    <h4 class="check">Intereses</h4>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+						<label class="form-check-label" for="defaultCheck1">
+						  Default checkbox
+						</label>
+					  </div>
+					  
+                    <div class="check"> <input type="checkbox" id="electro" name="intereses" value="Electro"> <label
+                            for="electro"> Electro</label></div>
+                    <div class="check"><input type="checkbox" id="moda" name="intereses" value="Moda"><label for="moda"> Moda
+                        </label></div>
+                    <div class="check"><input type="checkbox" id="hogar" name="intereses" value="Hogar"><label for="hogar">
+                            Hogar</label></div>
+                    <div class="check"><input type="checkbox" id="jugueteria" name="intereses" value="Jugueteria"><label for="jugueteria"> Jugueteria</label></div>
+                    <div class="check"><input type="checkbox" id="vida sana" name="intereses" value="Vida Sana"><label for="vida sana"> Vida
+                            Sana</label></div>
+                </div>
+            </div>
+            <!--<div class"contraseñas">--->
+            <input class="inp" type="file" name="foto" accept=".jpg" multiple>
+            <input class="inp" type="password" name="contraseña" placeholder="Contraseña"  required>
+            <input class="inp" type="password" name="confirmarContraseña" placeholder="Confirma contrseña" required>
+            <div>
+               <input class="btnR" type="submit" value="Enviar">
+               <input class="btnRo" type="reset" value="Borrar">
+            </div>
+        </form>
+    </main>
+    
+
+
+
+
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>
